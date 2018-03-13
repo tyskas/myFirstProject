@@ -1,8 +1,10 @@
 let movieData = {
-    //movie info will go here
-
     title: "Inception",
-    description: "Movie about dreams within dreams.",
-    actors: ["Leonardo DiCaprio", "Ellen Page", "Tom Hardy"],
-    imageURL: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg"
-};
+    imgUrl: "https://static.rogerebert.com/uploads/movie/movie_poster/inception-2010/large_ziKvu3Th9l1wN2aIeVj5ElpBqFu.jpg",
+    review: "A very meta movie about dreams within dreams. And then there was a whole bunch of shooting, not really sure how that fit into the picture.",
+    actors: [
+      "Leonardo DiCaprio",
+      "Ellen Page",
+      "Ken Watanabe"
+    ]
+  };

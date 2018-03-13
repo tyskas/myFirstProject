@@ -1,14 +1,29 @@
-renderMovie(movieData);
-
-function renderMovie(movie){
-    document.getElementById("movietitle").innerText = movie.title;
-    document.getElementById("descriptiontext").innerText = movie.description;
-    document.getElementById("image").setAttribute("src",movie.imageURL);
-    let list = document.getElementById("actorlist");
-    for (i = 0; i < movie.actors.length; i++) { 
-        var actor = document.createElement("li");
-        actor.innerText=movie.actors[i];
-        list.appendChild(actor);
+function renderMovie(data){
+    $(".infosection h1").text(data.title);
+    $(".infosection p").text(data.review);
+    $(".poster").attr("src", data.imgUrl);
+  
+    let actorList = "";
+    for(let i=0; i<data.actors.length; i++){
+      actorList += "<li>" + data.actors[i] + "</li>";
     }
-}
-
+    $(".infosection ul").html(actorList);
+  }
+  
+  function changeStarRating(rating){
+    for(let i=1; i<=5; i++){
+      let star = $("#star" + i);
+      if (i <= rating){
+        star.addClass("filled");
+      } else {
+        star.removeClass("filled");
+      }
+    }
+  }
+  
+  for(let i=1; i<=5; i++){
+    let star = $("#star" + i);
+    star.on("click", function() { changeStarRating(i)});
+  }
+  
+  renderMovie(movieData);
