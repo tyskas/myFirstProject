@@ -1,3 +1,5 @@
+@grey-col: #b4b4b4;
+
 .container {
   width: 700px;
   margin: 10px auto;
@@ -5,21 +7,27 @@
   flex-direction: row;
   background-color: moccasin;
   padding: 10px;
+
 }
+
 .poster {
   max-width: 200px;
   max-height: 350px;
 }
+
+
 .infosection {
   flex-grow: 1;
   padding: 15px;
 }
+
 .stars span {
-  color: #b4b4b4;
+  color: @grey-col;
   user-select: none;
   cursor: pointer;
   font-size: 15px;
 }
+
 .stars .filled {
   color: black;
 }

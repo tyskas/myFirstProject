@@ -1,0 +1,25 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "simple webpage",
+  "main": "code.js",
+  "scripts": {
+    "styles": "lessc styles.less styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyskas/myFirstProject.git"
+  },
+  "keywords": [
+    "hej"
+  ],
+  "author": "Åsa Tysk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyskas/myFirstProject/issues"
+  },
+  "homepage": "https://github.com/tyskas/myFirstProject#readme",
+  "devDependencies": {
+    "less": "^3.0.1"
+  }
+}

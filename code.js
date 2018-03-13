@@ -1,3 +1,5 @@
+
+
 function renderMovie(data){
     $(".infosection h1").text(data.title);
     $(".infosection p").text(data.review);
