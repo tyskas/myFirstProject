@@ -28,8 +28,5 @@ function renderMovie(data){
     let star = $("#star" + i);
     star.on("click", function() { changeStarRating(i)});
   }
-  
-  
 
   renderMovie(movieData);
-  alert("Heja dig!");
