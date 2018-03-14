@@ -3,7 +3,7 @@ const WebpackNotifierPlugin = require("webpack-notifier");
 
 module.exports = {
     mode: 'development', // whether we're building for dev or prod
-    entry: './code.js', // which file to begin with
+    entry: './code.ts', // which file to begin with
     output: {
       path: path.resolve(__dirname, "distribution"), // what folder to put bundle in
       filename: 'bundle.js' // what name to use for bundle
@@ -13,7 +13,16 @@ module.exports = {
         watchContentBase: true, // so we reload if other stuff like CSS changes
         port: 9000, // it'll now be at http://localhost:9000
     },
+    resolve: {
+        extensions: ['.ts', '.js']
+      },
+    module: {
+        rules: [
+          // all files with a `.ts` extension will be handled by `ts-loader`
+          { test: /\.ts$/, loader: 'ts-loader' }
+        ]
+    },
     plugins: [
         new WebpackNotifierPlugin({alwaysNotify: true}),
-      ]
+      ],
   }
