@@ -1,7 +1,8 @@
 import {movieData} from "./data";
 import * as $ from "jquery";
+import { Review } from "./interfaces";
 
-function renderMovie(data){
+function renderMovie(data: Review){
     $(".infosection h1").text(data.title);
     $(".infosection p").text(data.review);
     $(".poster").attr("src", data.imgUrl);
@@ -11,7 +12,7 @@ function renderMovie(data){
       actorList += "<li>" + data.actors[i] + "</li>";
     }
     $(".infosection ul").html(actorList);
-  }
+}
   
   function changeStarRating(rating){
     for(let i=1; i<=5; i++){
@@ -30,3 +31,7 @@ function renderMovie(data){
   }
 
   renderMovie(movieData);
+
+  $(function(){ 
+    alert('Hello'); 
+});
