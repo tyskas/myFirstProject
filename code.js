@@ -1,4 +1,5 @@
-
+let movieData = require("./data");
+let $ = require("jquery");
 
 function renderMovie(data){
     $(".infosection h1").text(data.title);
@@ -28,4 +29,7 @@ function renderMovie(data){
     star.on("click", function() { changeStarRating(i)});
   }
   
+  
+
   renderMovie(movieData);
+  alert("Heja dig!");
