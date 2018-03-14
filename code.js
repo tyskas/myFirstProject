@@ -29,4 +29,6 @@ function renderMovie(data){
     star.on("click", function() { changeStarRating(i)});
   }
 
+  alert("Goodbye Pardis")
+
   renderMovie(movieData);
