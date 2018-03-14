@@ -8,6 +8,9 @@
     "copyindex": "cp index.html distribution/index.html",
     "bundle": "webpack",
     "start:dev": "webpack-dev-server",
+    "lintless": "stylelint styles.less",
+    "lintjs": "eslint . ",
+    "lint": "npm run lintless && npm run lintjs",
     "build": "npm run bundle && npm run styles && npm run copyindex"
   },
   "repository": {
@@ -24,7 +27,9 @@
   },
   "homepage": "https://github.com/tyskas/myFirstProject#readme",
   "devDependencies": {
+    "eslint": "^4.18.2",
     "less": "^3.0.1",
+    "stylelint": "^9.1.2",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11",
     "webpack-dev-server": "^3.1.1",

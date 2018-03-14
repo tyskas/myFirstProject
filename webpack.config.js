@@ -9,7 +9,7 @@ module.exports = {
       filename: 'bundle.js' // what name to use for bundle
     },
     devServer: {
-        contentBase: path.join(__dirname, "distribution"), // the root for the server
+        contentBase: path.resolve(__dirname, "distribution"), // the root for the server
         watchContentBase: true, // so we reload if other stuff like CSS changes
         port: 9000, // it'll now be at http://localhost:9000
     },
